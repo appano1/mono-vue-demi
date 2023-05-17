@@ -1,5 +1,7 @@
 lockfileVersion: '6.0'
 
+packageExtensionsChecksum: 8975f3e5ec6469b7c1eac5057b6665e2
+
 importers:
 
   .:
@@ -65,11 +67,14 @@ importers:
   packages/ui:
     dependencies:
       '@vue/composition-api':
-        specifier: 1.7.1
+        specifier: ^1.7.1
         version: 1.7.1(vue@2.6.14)
       vue:
-        specifier: 2.6.14
-        version: 2.6.14
+        specifier: ^2.6.14 || >=3.0.0
+        version: 3.3.2
+      vue-demi:
+        specifier: latest
+        version: 0.14.1(@vue/composition-api@1.7.1)(vue@3.3.2)
     devDependencies:
       eslint:
         specifier: ^7.32.0
@@ -83,6 +88,12 @@ importers:
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
+      vue2:
+        specifier: npm:vue@2.6.14
+        version: /vue@2.6.14
+      vue3:
+        specifier: npm:vue@3
+        version: /vue@3.3.2
 
 packages:
 
@@ -110,7 +121,6 @@ packages:
   /@babel/parser@7.21.8:
     resolution: {integrity: sha512-6zavDGdzG3gUqAdWvlLFfk+36RilI+Pwyuuh7HItyeScCWP3k6i8vKclAQ0bM/0y/Kz/xiwvxhMv9MgTJP5gmA==}
     engines: {node: '>=6.0.0'}
-    hasBin: true
     dependencies:
       '@babel/types': 7.21.5
 
@@ -582,6 +592,7 @@ packages:
       vue: '>= 2.5 < 2.7'
     dependencies:
       vue: 2.6.14
+      vue2: /vue@2.6.14
     dev: false
 
   /@vue/reactivity-transform@3.3.2:
@@ -904,7 +915,6 @@ packages:
 
   /eslint-config-prettier@8.8.0(eslint@7.32.0):
     resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
-    hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
@@ -1448,7 +1458,6 @@ packages:
   /svgo@3.0.2:
     resolution: {integrity: sha512-Z706C1U2pb1+JGP48fbazf3KxHrWOsLme6Rv7imFBn5EnuanDW1GPaA/P1/dvObE670JDePC3mnj0k0B7P0jjQ==}
     engines: {node: '>=14.0.0'}
-    hasBin: true
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
@@ -1589,7 +1598,6 @@ packages:
   /vite@4.3.6:
     resolution: {integrity: sha512-cqIyLSbA6gornMS659AXTVKF7cvSHMdKmJJwQ9DXq3lwsT1uZSdktuBRlpHQ8VnOWx0QHtjDwxPpGtyo9Fh/Qg==}
     engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
     peerDependencies:
       '@types/node': '>= 14'
       less: '*'
@@ -1618,9 +1626,24 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vue-demi@0.14.1(@vue/composition-api@1.7.1)(vue@3.3.2):
+    resolution: {integrity: sha512-rt+yuCtXvscYot9SQQj3WKZJVSriPNqVkpVBNEHPzSgBv7QIYzsS410VqVgvx8f9AAPgjg+XPKvmV3vOqqkJQQ==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@vue/composition-api': 1.7.1(vue@2.6.14)
+      vue: 3.3.2
+    dev: false
+
   /vue@2.6.14:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
-    dev: false
 
   /vue@3.3.2:
     resolution: {integrity: sha512-98hJcAhyDwZoOo2flAQBSPVYG/o0HA9ivIy2ktHshjE+6/q8IMQ+kvDKQzOZTFPxvnNMcGM+zS2A00xeZMA7tA==}

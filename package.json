@@ -12,5 +12,14 @@
     "prettier": "^2.8.8",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.5.1"
+  "packageManager": "pnpm@8.5.1",
+  "pnpm": {
+    "packageExtensions": {
+      "@vue/composition-api": {
+        "dependencies": {
+          "vue2": "npm:vue@2.6.14"
+        }
+      }
+    }
+  }
 }

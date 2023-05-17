@@ -6,7 +6,14 @@
       "outputs": ["dist/**"]
     },
     "lint": {},
+    "switch:vue2": {
+      "cache": false
+    },
+    "switch:vue3": {
+      "cache": false
+    },
     "dev": {
+      "dependsOn": ["switch:vue3"],
       "cache": false,
       "persistent": true
     }
