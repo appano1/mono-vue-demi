@@ -16,6 +16,11 @@
       "dependsOn": ["switch:vue3"],
       "cache": false,
       "persistent": true
+    },
+    "storybook": {
+      "dependsOn": ["switch:vue2"],
+      "cache": false,
+      "persistent": true
     }
   }
 }
